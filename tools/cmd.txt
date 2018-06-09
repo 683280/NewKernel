@@ -1,0 +1,3 @@
+grub-file
+qemu-system-i386 -cdrom myos.iso
+grub-mkrescue -o myos.iso isodir/ --verbose

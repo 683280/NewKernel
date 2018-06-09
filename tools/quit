@@ -1,0 +1,10 @@
+label: gpt
+label-id: 9E132E06-1430-4981-90C8-F3CA50E6121C
+device: disk
+unit: sectors
+first-lba: 2048
+last-lba: 204766
+
+disk1 : start=        2048, size=        2048, type=21686148-6449-6E6F-744E-656564454649, uuid=5A185A46-2E06-4B1F-98FF-47877C04F42D
+disk2 : start=        4096, size=       20480, type=0FC63DAF-8483-4772-8E79-3D69D8477DE4, uuid=61A3DFE7-EFF1-450F-A09E-F90B5143DE08
+disk3 : start=       24576, size=      180191, type=0FC63DAF-8483-4772-8E79-3D69D8477DE4, uuid=920193E8-D1A6-4856-88CF-6CB6E273B152

@@ -1,0 +1,8 @@
+build/
+disk
+*.o
+*.ao
+*.img
+*.iso
+vhd
+cmake-build-debug

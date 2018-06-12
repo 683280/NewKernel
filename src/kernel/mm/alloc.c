@@ -2,8 +2,9 @@
 // Created by Carl on 2018/6/5.
 //
 
-#include <alloc.h>
+#include <mm/alloc.h>
 #include <type.h>
+#include <video/chr.h>
 
 #define tag_size sizeof(boundary_tag)
 
@@ -76,12 +77,16 @@ struct low_tag* new_low_tag(){
 }
 void* get_low_mem(){
     struct low_tag* tag;
-    if(!low_mm.page_tag){
+    tag = low_mm.page_tag;
+    if(!tag){
+//        dprintf("get_low_mem new_low_tag\n");
         tag = new_low_tag();
     }
-
+    if (!tag)
+        return NULL;
     if(tag->free_size){
     }
+
 
     u32 tem = tag->max_size / 64 * 2;
     u32 off;
@@ -102,6 +107,7 @@ void* get_low_mem(){
     end:
     off = ((i * 32) + j) * 64;
     tem = ((void*)tag) + off;
+//    dprintf("tag = 0x%08x address = 0x%08x  off = %d\n",tag,tem,off);
     return tem;
 }
 void free_low_mem(u32 p){

@@ -1,6 +1,7 @@
 ENTRY (s_kernel_entry)
 SECTIONS{
     . = 0x00100000;
+    kern_start = .;
     vchars = 0xb8000;
     .text :{
         *(.multiboot)

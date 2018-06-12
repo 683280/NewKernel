@@ -1,6 +1,6 @@
-#include <device.h>
-#include <vfs.h>
-#include <mm.h>
+#include <devices/device.h>
+#include <fs/vfs.h>
+#include <mm/mm.h>
 
 static uint32_t
 ramdev_read(inode_t *inode, uint64_t offset, uint64_t size, void *_buf)

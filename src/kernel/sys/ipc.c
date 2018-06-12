@@ -2,9 +2,9 @@
 // Created by 13342 on 2018/3/29.
 //
 
-#include <chr.h>
-#include <ipc.h>
-#include <sched.h>
+#include <video/chr.h>
+#include <sys/ipc.h>
+#include <sched/sched.h>
 
 int message_sendrecv(int func, int c, int b, PROCESS *pro){
     if(func == SEND){

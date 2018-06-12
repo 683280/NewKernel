@@ -6,7 +6,7 @@
 #define NEWKERNEL_MM_H
 
 #include "type.h"
-#include <sched.h>
+#include <sched/sched.h>
 
 void init_mm(u32 start,u32 end);
 
@@ -26,4 +26,6 @@ void set_pg_type(char avl,char g,char d,char a,char pcd,char pwt,char us,char rw
 void* alloc(int size,PROCESS* pro);
 
 u32 line_to_physics(u32 line_addres);
+
+int mm_check_addr(void *addr);
 #endif //NEWKERNEL_MM_H

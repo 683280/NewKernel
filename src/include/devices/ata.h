@@ -1,7 +1,7 @@
 #ifndef _ATA_H
 #define _ATA_H
 
-#include <device.h>
+#include <devices/device.h>
 
 #define ATA_LBA_MODE	0xE0
 #define ATA_SECT		0x1F2	// number of sectors

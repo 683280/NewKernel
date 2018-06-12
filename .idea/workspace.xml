@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/include/itr/pic.h" description="&#10;void send_pic_eoi(u8 irq);" line="8" />
+  </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
       <config projectName="NewKernel" targetName="NewKernel" />
@@ -11,55 +14,88 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="776619e4-863e-4b59-bfde-c4c66490b52d" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="776619e4-863e-4b59-bfde-c4c66490b52d" name="Default" comment="new update">
+      <change afterPath="$PROJECT_DIR$/makehead" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/makeheader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/arch/x86/irq.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/devices/serial.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/itr/pic.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/mm/symbols.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/video/print.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/include/x86/irq.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kernel/devices/serial.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kernel/itr/pic.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kernel/mm/symbols.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kernel/video/print.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdC/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.7.2/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/NewKernel.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/NewKernel.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/NewKernel.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bochsout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/bochsout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/c" beforeDir="false" afterPath="$PROJECT_DIR$/c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kernel.ld" beforeDir="false" afterPath="$PROJECT_DIR$/kernel.ld" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arch/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/arch/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arch/x86/gdt.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/arch/x86/gdt.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arch/x86/idt.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/arch/x86/idt.asm" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/arch/x86/idt.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/arch/x86/idt.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/arch/x86/x86.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/arch/x86/x86.asm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/alloc.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/alloc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/include/device.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/device.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/boot/loader.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/boot/loader.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/alloc.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/mm/alloc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/ata.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/devices/ata.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/chr.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/video/chr.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/devfs.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/fs/devfs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/device.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/devices/device.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/elf.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/elf/elf.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/exec.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/sched/exec.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/ext2.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/fs/ext2/ext2.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/fbase.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/gdt.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/x86/gdt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/gdt_tool.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/x86/gdt_tool.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/idt.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/x86/idt.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/initramfs.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/initramfs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/io.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/io/io.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/ipc.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/sys/ipc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/keymap.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/devices/keymap.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/mm.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/mm/mm.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/paging.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/mm/paging.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/process.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/sys/process.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/sched.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/sched/sched.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/string.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/mm/string.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/sys.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/sys/sys.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/sys_call.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/sys/sys_call.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/sys_table.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/sys/sys_table.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/task.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/task.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/type.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/type.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/vfs.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/fs/vfs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/include/vga.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/io/vga.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel/chr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/chr.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/kernel/devices/ata.asm" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/devices/ata.asm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/chr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/video/chr.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel/devices/ata.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/devices/ata.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/devices/ramdev.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/devices/ramdev.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel/fs/ext2/ext2.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/fs/ext2/ext2.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/fs/vfs.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/fs/vfs.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/fs2/devfs.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/fs2/devfs.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/fs2/fsman.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/fs2/fsman.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/fs2/initramfs.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/fs2/initramfs.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/init/init.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/init/init.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel/io/io.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/io/io.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/io/vga.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/io/vga.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel/itr/itr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/itr/itr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/itr/itr.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/include/itr/itr.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel/mm/alloc.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/mm/alloc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/mm/mm.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/mm/mm.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/kernel/mm/paging.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/mm/paging.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/mm/string.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/mm/string.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/sched/exec.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/sched/exec.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/sched/sched.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/sched/sched.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/sys/ipc.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/sys/ipc.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/sys/process.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/sys/process.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/sys/sys.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/sys/sys.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/sys/sys_call.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/sys/sys_call.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kernel/tools/gdt_tool.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/kernel/tools/gdt_tool.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/symbols" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/symbols" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/usr/usr.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/usr/usr.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -71,13 +107,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kernel/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
+            <state relative-caret-position="382">
+              <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
               <folding>
-                <element signature="e#41#57#0" expanded="true" />
+                <element signature="e#41#63#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,20 +122,44 @@
       <file leaf-file-name="ext2.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kernel/fs/ext2/ext2.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-              <folding>
-                <element signature="e#0#16#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="408">
+              <caret line="164" selection-start-line="164" selection-end-line="164" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="ata.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/kernel/devices/ata.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="327">
+              <caret line="159" selection-start-line="159" selection-end-line="159" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kernel.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kernel.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mm.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/include/mm/mm.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ext2.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/include/fs/ext2/ext2.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="492">
+              <caret line="162" column="12" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -107,19 +167,10 @@
       <file leaf-file-name="itr.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kernel/itr/itr.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="idt.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/arch/x86/idt.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="54" column="48" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="48" />
+            <state relative-caret-position="146">
+              <caret line="47" column="33" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="33" />
               <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#40#60#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -128,34 +179,26 @@
       <file leaf-file-name="idt.asm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/arch/x86/idt.asm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1504" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="x86.asm" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/arch/x86/x86.asm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-352" />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ata.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kernel/devices/ata.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="153" column="42" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="228">
+              <caret line="81" selection-start-line="81" selection-end-line="81" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/kernel/Makefile">
+      <file leaf-file-name="vfs.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/include/fs/vfs.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+            <state relative-caret-position="229">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="type.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/include/type.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -164,17 +207,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ext2fs</find>
-      <find>kfree</find>
-      <find>debug</find>
-      <find>ata</find>
-      <find>memset</find>
-      <find>strdup</find>
-      <find>strlen</find>
-      <find>flip_up</find>
-      <find>ext2_read</find>
-      <find>__udivdi3</find>
-      <find>ramdev</find>
       <find>string</find>
       <find>uint32_t</find>
       <find>ext2_private_t</find>
@@ -193,7 +225,18 @@
       <find>l_pageSize</find>
       <find>l_freePages</find>
       <find>alloc</find>
+      <find>x86_64-elf-gcc</find>
       <find>read block</find>
+      <find>keyboard</find>
+      <find>keyboard_idt</find>
+      <find>_set_8259a</find>
+      <find>ptr_t</find>
+      <find>ypos</find>
+      <find>fsman_getfs</find>
+      <find>fsman</find>
+      <find>load</find>
+      <find>read b</find>
+      <find>dev_inode-&gt;list</find>
     </findStrings>
     <replaceStrings>
       <replace>p_curr_proc</replace>
@@ -202,6 +245,8 @@
       <replace>free</replace>
       <replace>printf</replace>
       <replace>edi</replace>
+      <replace>u32</replace>
+      <replace>y</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -210,57 +255,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/arch/Makefile" />
-        <option value="$PROJECT_DIR$/src/kernel/itr/irq.asm" />
-        <option value="$PROJECT_DIR$/src/arch/x86/idt.asm" />
-        <option value="$PROJECT_DIR$/src/arch/init_cpu.asm" />
-        <option value="$PROJECT_DIR$/kernel.ld" />
-        <option value="$PROJECT_DIR$/src/kernel/mm/liballoc.c" />
-        <option value="$PROJECT_DIR$/src/kernel/entry.asm" />
-        <option value="$PROJECT_DIR$/src/include/process.h" />
-        <option value="$PROJECT_DIR$/src/kernel/sys/process.c" />
-        <option value="$PROJECT_DIR$/src/kernel/fs2/vfs.h" />
-        <option value="$PROJECT_DIR$/src/kernel/fs2/ext2.c" />
-        <option value="$PROJECT_DIR$/src/kernel/fs2/vfs.c" />
-        <option value="$PROJECT_DIR$/src/include/mm.h" />
-        <option value="$PROJECT_DIR$/src/kernel/devices/ramdev.c" />
-        <option value="$PROJECT_DIR$/src/kernel/fs2/device.h" />
-        <option value="$PROJECT_DIR$/src/kernel/fs2/initramfs.h" />
-        <option value="$PROJECT_DIR$/src/kernel/test.sh" />
-        <option value="$PROJECT_DIR$/src/include/devfs.h" />
-        <option value="$PROJECT_DIR$/src/kernel/fs/vfs.c" />
-        <option value="$PROJECT_DIR$/src/kernel/mm/mm.asm" />
-        <option value="$PROJECT_DIR$/src/include/string.h" />
-        <option value="$PROJECT_DIR$/src/include/type.h" />
-        <option value="$PROJECT_DIR$/src/kernel/fs2/devfs.c" />
-        <option value="$PROJECT_DIR$/src/kernel/fs2/fsman.c" />
-        <option value="$PROJECT_DIR$/src/kernel/fs2/initramfs.c" />
-        <option value="$PROJECT_DIR$/src/kernel/io/vga.c" />
-        <option value="$PROJECT_DIR$/src/kernel/devices/device.c" />
-        <option value="$PROJECT_DIR$/src/include/paging.h" />
-        <option value="$PROJECT_DIR$/src/include/ata.h" />
-        <option value="$PROJECT_DIR$/b" />
-        <option value="$PROJECT_DIR$/c" />
-        <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/isodir/boot/grub/grub.cfg" />
-        <option value="$PROJECT_DIR$/src/include/vfs.h" />
         <option value="$PROJECT_DIR$/src/include/ext2.h" />
-        <option value="$PROJECT_DIR$/src/kernel/mm/mm.c" />
         <option value="$PROJECT_DIR$/src/kernel/mm/string.c" />
-        <option value="$PROJECT_DIR$/src/kernel/chr.c" />
         <option value="$PROJECT_DIR$/src/kernel/mm/paging.c" />
         <option value="$PROJECT_DIR$/src/kernel/devices/ata.asm" />
         <option value="$PROJECT_DIR$/src/include/device.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/kernel/mm/alloc.c" />
         <option value="$PROJECT_DIR$/src/include/alloc.h" />
-        <option value="$PROJECT_DIR$/src/kernel/main.c" />
-        <option value="$PROJECT_DIR$/src/arch/x86/idt.c" />
-        <option value="$PROJECT_DIR$/src/kernel/itr/itr.c" />
-        <option value="$PROJECT_DIR$/src/kernel/devices/ata.c" />
-        <option value="$PROJECT_DIR$/src/kernel/Makefile" />
-        <option value="$PROJECT_DIR$/src/kernel/fs/ext2/ext2.c" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/arch/Makefile" />
+        <option value="$PROJECT_DIR$/makeheader" />
+        <option value="$PROJECT_DIR$/makehead" />
+        <option value="$PROJECT_DIR$/src/scripts/symbols" />
+        <option value="$PROJECT_DIR$/src/include/symbols.h" />
+        <option value="$PROJECT_DIR$/Makefile" />
+        <option value="$PROJECT_DIR$/kernel.ld" />
+        <option value="$PROJECT_DIR$/src/arch/x86/irq.c" />
+        <option value="$PROJECT_DIR$/src/include/x86/irq.h" />
+        <option value="$PROJECT_DIR$/src/include/itr/pic.h" />
+        <option value="$PROJECT_DIR$/symbols.c" />
+        <option value="$PROJECT_DIR$/scripts/symbols" />
+        <option value="$PROJECT_DIR$/src/kernel/itr/pic.c" />
+        <option value="$PROJECT_DIR$/src/arch/x86/x86.asm" />
+        <option value="$PROJECT_DIR$/src/include/x86/idt.h" />
+        <option value="$PROJECT_DIR$/src/kernel/io/io.c" />
+        <option value="$PROJECT_DIR$/src/include/io/io.h" />
+        <option value="$PROJECT_DIR$/src/arch/x86/idt.c" />
+        <option value="$PROJECT_DIR$/src/kernel/Makefile" />
+        <option value="$PROJECT_DIR$/c" />
+        <option value="$PROJECT_DIR$/src/include/chr.h" />
+        <option value="$PROJECT_DIR$/src/include/mm/mm.h" />
+        <option value="$PROJECT_DIR$/src/kernel/mm/mm.c" />
+        <option value="$PROJECT_DIR$/src/kernel/chr.c" />
+        <option value="$PROJECT_DIR$/src/include/video/print.h" />
+        <option value="$PROJECT_DIR$/src/kernel/video/print.c" />
+        <option value="$PROJECT_DIR$/src/kernel/fs2/fsman.c" />
+        <option value="$PROJECT_DIR$/src/kernel/mm/symbols.c" />
+        <option value="$PROJECT_DIR$/src/include/devices/device.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/kernel/devices/serial.c" />
+        <option value="$PROJECT_DIR$/src/include/devices/serial.h" />
+        <option value="$PROJECT_DIR$/src/kernel/video/chr.c" />
+        <option value="$PROJECT_DIR$/src/include/video/chr.h" />
+        <option value="$PROJECT_DIR$/src/kernel/mm/alloc.c" />
+        <option value="$PROJECT_DIR$/src/include/itr/itr.h" />
+        <option value="$PROJECT_DIR$/src/kernel/itr/itr.c" />
+        <option value="$PROJECT_DIR$/src/arch/x86/idt.asm" />
+        <option value="$PROJECT_DIR$/src/include/type.h" />
+        <option value="$PROJECT_DIR$/kernel.log" />
+        <option value="$PROJECT_DIR$/src/include/fs/vfs.h" />
+        <option value="$PROJECT_DIR$/src/kernel/devices/ata.c" />
+        <option value="$PROJECT_DIR$/src/kernel/fs/ext2/ext2.c" />
+        <option value="$PROJECT_DIR$/src/kernel/main.c" />
       </list>
     </option>
   </component>
@@ -276,7 +321,7 @@
     </layout>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+  <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1680" />
     <option name="height" value="1050" />
   </component>
@@ -297,20 +342,66 @@
             <path>
               <item name="NewKernel" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewKernel" type="462c0819:PsiDirectoryNode" />
-              <item name="isodir" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NewKernel" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewKernel" type="462c0819:PsiDirectoryNode" />
-              <item name="isodir" type="462c0819:PsiDirectoryNode" />
-              <item name="boot" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="NewKernel" type="b2602c69:ProjectViewProjectNode" />
               <item name="NewKernel" type="462c0819:PsiDirectoryNode" />
-              <item name="isodir" type="462c0819:PsiDirectoryNode" />
-              <item name="boot" type="462c0819:PsiDirectoryNode" />
-              <item name="grub" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="arch" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NewKernel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewKernel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="arch" type="462c0819:PsiDirectoryNode" />
+              <item name="x86" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NewKernel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewKernel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="include" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NewKernel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewKernel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="kernel" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NewKernel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewKernel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="kernel" type="462c0819:PsiDirectoryNode" />
+              <item name="devices" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NewKernel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewKernel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="kernel" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NewKernel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewKernel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="kernel" type="462c0819:PsiDirectoryNode" />
+              <item name="fs" type="462c0819:PsiDirectoryNode" />
+              <item name="ext2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="NewKernel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="NewKernel" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="kernel" type="462c0819:PsiDirectoryNode" />
+              <item name="itr" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -321,22 +412,23 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Makefile" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/include" />
-      <recent name="$PROJECT_DIR$/src/kernel/fs/ext2" />
-      <recent name="$PROJECT_DIR$/src/kernel/fs" />
-      <recent name="$PROJECT_DIR$/src/kernel/fs2" />
-      <recent name="$PROJECT_DIR$/tools" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/kernel/video" />
       <recent name="$PROJECT_DIR$/src/kernel/mm" />
+      <recent name="$PROJECT_DIR$/src/include" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/include" />
-      <recent name="$PROJECT_DIR$/src/kernel/devices" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/include/devices" />
+      <recent name="$PROJECT_DIR$/src/include/video" />
+      <recent name="$PROJECT_DIR$/src/kernel/video" />
+      <recent name="$PROJECT_DIR$/src/include/itr" />
+      <recent name="$PROJECT_DIR$/src/include/x86" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -632,7 +724,8 @@
       <workItem from="1527483254183" duration="524000" />
       <workItem from="1527513850219" duration="4438000" />
       <workItem from="1527603179655" duration="100532000" />
-      <workItem from="1528536784783" duration="3036000" />
+      <workItem from="1528536784783" duration="6599000" />
+      <workItem from="1528712876003" duration="25014000" />
     </task>
     <task id="LOCAL-00001" summary="backup">
       <created>1507812411833</created>
@@ -652,7 +745,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="333678000" />
+    <option name="totallyTimeSpent" value="362255000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,10 +757,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="6" />
+    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.20595238" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.20595238" />
       <window_info anchor="bottom" id="TODO" order="10" weight="0.3296593" />
       <window_info anchor="bottom" id="CMake" order="0" weight="0.31062123" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -675,7 +768,7 @@
       <window_info anchor="bottom" id="Run" order="6" weight="0.3296593" />
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.22745492" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3246493" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -707,388 +800,360 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/kernel/devices/ata.c">
+    <entry file="file://$PROJECT_DIR$/src/kernel/init/init.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2190">
-          <caret line="153" column="42" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/mm/alloc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4260">
-          <caret line="284" column="14" selection-start-line="284" selection-start-column="11" selection-end-line="284" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-            <element signature="e#504#649#0" expanded="true" />
-            <element signature="e#1173#1234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="42" selection-start-column="42" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/fs/ext2/init_ext2.c" />
-    <entry file="file://$PROJECT_DIR$/src/include/devfs.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/string.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/fs2/devfs.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="40" column="12" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/string.c" />
-    <entry file="file://$PROJECT_DIR$/src/kernel/devices/ramdev.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/devices/device.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/io.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/io/io.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="120">
+          <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/sys/process.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/sys/sys.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/sys/ipc.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/x86/irq.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/disk.h" />
-    <entry file="file://$PROJECT_DIR$/src/boot/loader.asm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/mm/mm.asm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/a">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="180" selection-start-line="14" selection-start-column="78" selection-end-line="14" selection-end-column="180" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/b">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/isodir/boot/grub/grub.cfg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/fs/vfs.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="75" column="32" selection-start-line="75" selection-start-column="28" selection-end-line="75" selection-end-column="32" />
-          <folding>
-            <element signature="e#1#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/chr.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/io/vga.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/mm/string.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="28" column="29" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="29" />
-          <folding>
-            <element signature="e#40#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/ata.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bochsout.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/device.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/devices/ata.asm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="84" selection-start-line="18" selection-start-column="84" selection-end-line="18" selection-end-column="84" />
+        <state relative-caret-position="146">
+          <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/vfs.h">
+    <entry file="file://$PROJECT_DIR$/scripts/symbols">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/x86/idt.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/itr/pic.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/io/io.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/ext2.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2250">
-          <caret line="150" column="13" selection-start-line="150" selection-start-column="13" selection-end-line="150" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/chr.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding>
-            <element signature="e#41#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/type.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="54" selection-start-line="19" selection-start-column="54" selection-end-line="19" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/paging.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="49" column="17" selection-start-line="49" selection-start-column="4" selection-end-line="49" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/mm/paging.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="67" column="16" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="16" />
-          <folding>
-            <element signature="e#39#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/mm/alloc.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="211" column="5" selection-start-line="211" selection-start-column="5" selection-end-line="211" selection-end-column="5" />
-          <folding>
-            <element signature="e#39#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/mm/mm.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="616">
-          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#40#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/mm.h">
+    <entry file="file://$PROJECT_DIR$/src/include/asm.h">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/io/io.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="19" />
+        <state relative-caret-position="386">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/itr/pic.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="44" column="62" selection-start-line="44" selection-start-column="62" selection-end-line="44" selection-end-column="62" />
           <folding>
-            <element signature="e#88#105#0" expanded="true" />
+            <element signature="e#40#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/include/alloc.h">
+    <entry file="file://$PROJECT_DIR$/src/include/va_list.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+        <state relative-caret-position="90">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/video/print.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/io/vga.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/sched/sched.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="27" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bochsout.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/fs2/fsman.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="35" column="18" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        <state relative-caret-position="570">
+          <caret line="44" column="19" lean-forward="true" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/mm/symbols.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/symbols.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-792">
+          <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/mm/symbols.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="47" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/devices/device.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/devices/device.c">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/mm/mm.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="619">
+          <caret line="51" column="6" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/devices/serial.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" selection-start-line="29" selection-end-line="29" selection-end-column="35" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
+            <element signature="e#40#67#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/fs2/initramfs.c">
+    <entry file="file://$PROJECT_DIR$/src/include/devices/serial.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
+        <state relative-caret-position="225">
+          <caret line="15" column="35" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/video/print.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-362">
+          <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding>
-            <element signature="e#1#17#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/io/vga.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/video/chr.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="16" selection-start-line="16" selection-end-line="16" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/video/chr.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="38" column="35" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/mm/alloc.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="110" column="15" selection-start-line="110" selection-start-column="15" selection-end-line="110" selection-end-column="15" />
+          <folding>
+            <element signature="e#39#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/itr/itr.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="30" column="103" selection-start-line="30" selection-start-column="103" selection-end-line="30" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kernel/itr/irq.asm">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arch/x86/irq.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arch/x86/x86.asm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/arch/x86/idt.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="84" column="11" selection-start-line="84" selection-end-line="84" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/arch/x86/idt.asm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1504" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arch/x86/x86.asm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/arch/x86/idt.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="54" column="48" selection-start-line="54" selection-start-column="36" selection-end-line="54" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="228">
+          <caret line="81" selection-start-line="81" selection-end-line="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/itr/itr.c">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="146">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="33" />
+          <folding>
+            <element signature="e#40#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/type.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/devices/ata.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/fs/ext2/ext2.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="162" column="12" selection-start-line="162" selection-start-column="12" selection-end-line="162" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/fs/vfs.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/include/mm/mm.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kernel.log">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="54" column="16" selection-start-line="54" selection-start-column="16" selection-end-line="54" selection-end-column="16" />
+          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/devices/ata.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="153" column="42" selection-start-line="153" selection-start-column="42" selection-end-line="153" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kernel/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="103" column="9" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
-          <folding>
-            <element signature="e#41#57#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="327">
+          <caret line="159" selection-start-line="159" selection-end-line="159" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kernel/fs/ext2/ext2.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/kernel/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        <state relative-caret-position="382">
+          <caret line="106" column="5" lean-forward="true" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
+          <folding>
+            <element signature="e#41#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

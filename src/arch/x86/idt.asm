@@ -47,6 +47,8 @@ extern do_simd_floating_point_exception
 extern do_virtualization_exception
 extern do_control_protection_exception
 
+errcode:
+        dd 0
 ;被0除
 s_div_by_zero:
         call s_save
@@ -77,9 +79,16 @@ s_invalid_opcode:
         call do_invalid_opcode
         ret
 s_coprocessor_not_available:
-        call s_save
+        cli
+        pop dword [errcode]
+        pusha
+
+        mov eax, cr2
+        push eax
         call do_coprocessor_not_available
-        ret
+        add esp, 4
+        popa
+        iret
 s_double_fault:
         call s_save
         pop eax
@@ -110,14 +119,28 @@ s_general_protection_fault:
         call do_general_protection_fault
         ret
 s_page_fault:
-        call s_save
-        pop eax
+        cli
+        pop dword [errcode]
+        pusha
+
+        mov eax, cr2
+        push eax
+        push dword [errcode]
         call do_page_fault
-        ret
+        add esp, 8
+        popa
+        iret
 s_reserved:
-        call s_save
+        cli
+        pop dword [errcode]
+        pusha
+
+        mov eax, cr2
+        push eax
         call do_reserved
-        ret
+        add esp, 4
+        popa
+        iret
 s_math_fault:
         call s_save
         call do_math_fault

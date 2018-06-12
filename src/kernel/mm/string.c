@@ -2,8 +2,8 @@
 // Created by Carl on 2018/5/31.
 //
 
-#include <alloc.h>
-#include "string.h"
+#include <mm/alloc.h>
+#include "mm/string.h"
 
 
 uint32_t strlen(uint8_t *str)

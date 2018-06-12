@@ -2,20 +2,21 @@
 // Created by carljay on 17-7-31.
 //
 
-#include <chr.h>
-#include <idt.h>
-#include <vga.h>
+#include <video/chr.h>
+#include <x86/idt.h>
+#include <io/vga.h>
 #include <asm.h>
 #include <task.h>
 #include <init.h>
 #include <multiboot.h>
-#include <mm.h>
-#include <paging.h>
-#include <alloc.h>
-#include <vfs.h>
-#include <ext2.h>
-#include <ata.h>
-#include <string.h>
+#include <mm/mm.h>
+#include <mm/paging.h>
+#include <mm/alloc.h>
+#include <fs/vfs.h>
+#include <fs/ext2/ext2.h>
+#include <devices/ata.h>
+#include <mm/string.h>
+#include <devices/serial.h>
 
 void run_init(){
     PROCESS* pro;
@@ -59,7 +60,7 @@ void kmain(multiboot_info_t * mbd, int magic){
         printf("GRUB LOAD Kernel\n");
     }
     paging_init(639,50048);
-
+    init_serial(SERIAL_COM1);
     ext2_private_t root_p = {
             .inode  =   2,
     };
@@ -88,19 +89,19 @@ void kmain(multiboot_info_t * mbd, int magic){
 //    }
 //    vfs_mount()
 
-    inode_t *root_fs;
-    if(!(root_fs = ext2fs.load(&root))){
+    if(!(ext2fs.init(&root))){
         printf("load error");
     }
-    inode_t* inode = root_fs->list->head;
-    printf("load end\n");
+    inode_t* inode = root.list->head;
+    dentry_t* dentry = root.list;
+
     char* buf = malloc(20);
-    for (int i = 0; i < root_fs->list->count; ++i) {
-//        printf("%s \n", inode->name);
+    for (int i = 0; i < root.list->count; ++i) {
         if (i == 3){
-            printf("read %s   filesize= %d  p = %08x  inode = %d \n",inode->name,inode->size,inode->p,((ext2_private_t*)inode->p)->inode);
-            ext2fs.read(inode,0,20,buf);
-            printf("           %s\n",buf);
+            dprintf("bs = %d \n",1024 << ((ext2_private_t*)inode->p)->sb->block_size);
+            dprintf("read file : %s   filesize = %d  p = %08x  inode = %d \n",inode->name,inode->size,inode->p,((ext2_private_t*)inode->p)->inode);
+            ext2fs.read(inode,0,13,buf);
+            printf("content : %s\n",buf);
         }
         inode = inode->next;
     }

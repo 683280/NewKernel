@@ -1,9 +1,9 @@
 
-#include <vfs.h>
+#include <fs/vfs.h>
 #include <initramfs.h>
-#include <string.h>
-#include <alloc.h>
-#include <chr.h>
+#include <mm/string.h>
+#include <mm/alloc.h>
+#include <video/chr.h>
 
 static inode_t *cpiofs_load(inode_t *inode)
 {

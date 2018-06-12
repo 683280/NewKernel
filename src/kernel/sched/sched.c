@@ -3,8 +3,8 @@
 // 进程调度
 //
 
-#include <chr.h>
-#include "sched.h"
+#include <video/chr.h>
+#include "sched/sched.h"
 
 extern void s_open_time();
 TSS tss;

@@ -1,10 +1,10 @@
-#include <vfs.h>
+#include <fs/vfs.h>
 
 #include <initramfs.h>
-#include <devfs.h>
-#include <ext2.h>
-#include <string.h>
-#include <chr.h>
+#include <fs/devfs.h>
+#include <fs/ext2/ext2.h>
+#include <mm/string.h>
+#include <video/chr.h>
 
 fs_t * filesystems[] = 
 {

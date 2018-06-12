@@ -1,11 +1,11 @@
-#include <device.h>
-#include <devfs.h>
-#include <ata.h>
-#include <string.h>
-#include <alloc.h>
-#include <mm.h>
-#include <io.h>
-#include <chr.h>
+#include <devices/device.h>
+#include <fs/devfs.h>
+#include <devices/ata.h>
+#include <mm/string.h>
+#include <mm/alloc.h>
+#include <mm/mm.h>
+#include <io/io.h>
+#include <video/chr.h>
 
 #define MBR_TYPE_UNUSED             0x00
 #define MBR_BOOT_SIGNATURE          0xAA55
@@ -146,11 +146,12 @@ ata_read(atadev_private_t *p, uint32_t addr, uint32_t size, void *buf) {
 	uint32_t LBA = addr/512;
 	uint32_t offset = addr - 512 * LBA;
 	uint32_t sectors = size/512 + + (size%512?1:0);
-	if(LBA > p->end_lba - p->start_lba){
-	    printf("ata read error  LBA > max LBA  LBA = %d\n",LBA);
+	uint32_t max_lba = p->end_lba - p->start_lba;
+	if(LBA > max_lba){
+	    dprintf("ata read error  LBA > max LBA(%d)  LBA = %d\n",max_lba,LBA);
         return -1;
 	}
-//	printf("LBA = %d  offset = %d   sectors = %d  size = %d   \n",LBA,offset,sectors,size);
+	dprintf("LBA = %d  offset = %d   sectors = %d  size = %d   \n",LBA,offset,sectors,size);
 	uint8_t *_buf = malloc(512 * sectors);
 	LBA += p->start_lba;
 	s_ata_read_sectors(LBA,sectors,_buf);
@@ -158,7 +159,6 @@ ata_read(atadev_private_t *p, uint32_t addr, uint32_t size, void *buf) {
 
 	memcpy(buf, _buf + offset, size);
 	free(_buf);
-//	printf("ret\n");
 	return size;
 }
 

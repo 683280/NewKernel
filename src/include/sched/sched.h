@@ -6,7 +6,7 @@
 #define NEWKERNEL_SCHED_H
 
 #include <type.h>
-#include <gdt.h>
+#include <x86/gdt.h>
 
 #define RUNNING 0
 #define WAITNG 1

@@ -2,9 +2,9 @@
 // Created by Carl on 2018/6/1.
 //
 
-#include "paging.h"
-#include <chr.h>
-#include <sched.h>
+#include "mm/paging.h"
+#include <video/chr.h>
+#include <sched/sched.h>
 
 u32 kernel_cr3;
 //4194304   占用4MB内存，高12位

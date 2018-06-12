@@ -11,7 +11,7 @@ typedef enum
 
 typedef struct dev_struct dev_t;
 
-#include <vfs.h>
+#include <fs/vfs.h>
 
 struct dev_struct
 {
@@ -21,6 +21,8 @@ struct dev_struct
 	dev_type	type;
 	//检查设备
 	uint32_t	(*probe)(void *p);
+	//初始化设备
+	uint32_t 	(*init)(void* p);
 	//读设备
 	uint32_t	(*read) (void *p, uint32_t offset, uint32_t size, void *buf);
 	//写设备

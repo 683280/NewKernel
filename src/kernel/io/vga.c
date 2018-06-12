@@ -2,8 +2,8 @@
 // Created by carljay on 17-8-15.
 //
 
-#include <mm.h>
-#include "vga.h"
+#include <mm/mm.h>
+#include "io/vga.h"
 int _get_point();
 void _set_point(int a);
 void repoint() {

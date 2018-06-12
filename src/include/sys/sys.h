@@ -5,8 +5,8 @@
 #ifndef NEWKERNEL_SYS_H
 #define NEWKERNEL_SYS_H
 
-#include <sys_table.h>
-#include <sched.h>
+#include <sys/sys_table.h>
+#include <sched/sched.h>
 extern void s_sys_call();
 
 //系统调用

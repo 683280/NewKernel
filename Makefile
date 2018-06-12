@@ -1,13 +1,10 @@
+include makehead
+
 SRC		=	.
 
 ARCH	= 	x86
 
-CC 		= 	x86_64-elf-gcc
-LD 		= 	x86_64-elf-ld
-OBJCOPY = 	x86_64-elf-objcopy
-NASM	= 	nasm
-
-CFLAGS	=	-I../include -m32 -s -std=c99 -fno-stack-protector
+CFLAGS	=	-Isrc/include -m32 -s -std=c99 -fno-stack-protector
 
 KERNEL_DIR	=	./src/kernel
 KERNEL_SRC	=	$(wildcard $(KERNEL_DIR)/*.c) $(wildcard $(KERNEL_DIR)/*/*.c) $(wildcard $(KERNEL_DIR)/*/*/*.c)
@@ -16,7 +13,12 @@ all:link
 
 link: src/kernel/kernel.o src/arch/$(ARCH)_arch.o $(KERNEL_SRC)
 	@echo $(LD) -m elf_i386 -T kernel.ld -o kernel_$(ARCH) src/arch/$(ARCH)_arch.o src/kernel/kernel.o
-	@$(LD) -m elf_i386 -T kernel.ld -o kernel_$(ARCH) src/arch/$(ARCH)_arch.o src/kernel/kernel.o
+	@$(LD) -m elf_i386 -T kernel.ld -r -o kernel_$(ARCH) src/arch/$(ARCH)_arch.o src/kernel/kernel.o
+	@echo -e "\033[32m  \033[1mScript\033[21m    \033[34m symbols\033[0m"
+	@scripts/symbols > symbols.c
+	@echo -e "\033[32m  \033[1mBuild\033[21m    \033[34m symbols\033[0m"
+	@$(CC) $(CFLAGS) -c -o symbols.o symbols.c
+	@$(LD) -m elf_i386 -T kernel.ld -o kernel_$(ARCH) src/arch/$(ARCH)_arch.o src/kernel/kernel.o symbols.o
 	@cp kernel_$(ARCH) isodir/boot/kernel
 	@grub-mkrescue -o myos.iso isodir/
 
@@ -29,10 +31,10 @@ src/arch/$(ARCH)_arch.o:
 	@cd src/arch; $(MAKE) CC=$(CC) ARCH=$(ARCH)
 
 run:
-	@qemu-system-i386 -cdrom myos.iso -m 50m
+	@qemu-system-i386 -cdrom myos.iso -m 50m -fda disk.img -boot c
 
 bochs:
-	@bochs -q -f b
+	@bochs -q -f c
 
 build_run:
 	@make -B

@@ -2,7 +2,7 @@
 // Created by Carl on 2018/5/24.
 //
 
-#include <chr.h>
+#include <video/chr.h>
 #include "init.h"
 #define syscall2(call, arg0, arg1) \
 	asm("int $0x80;":: "a"(call), "b"(arg0), "c"(arg1));

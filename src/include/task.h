@@ -5,10 +5,10 @@
 #ifndef NEWKERNEL_TASK_H
 #define NEWKERNEL_TASK_H
 
-#include <mm.h>
-#include <gdt_tool.h>
-#include <chr.h>
-#include <ipc.h>
+#include <mm/mm.h>
+#include <x86/gdt_tool.h>
+#include <video/chr.h>
+#include <sys/ipc.h>
 typedef	void	(*task_f)	();
 typedef struct s_task {
     task_f	initial_eip;//程序入口

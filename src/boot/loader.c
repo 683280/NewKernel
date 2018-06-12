@@ -1,8 +1,8 @@
 //
 // Created by 13342 on 2017/8/5.
 //
-#include <elf.h>
-#include <vga.h>
+#include <elf/elf.h>
+#include <io/vga.h>
 #include "type.h"
 #include <multiboot.h>
 char* laod_addres = 0x1000;

@@ -1,7 +1,7 @@
 #ifndef _INITRAMFS_H
 #define _INITRAMFS_H
 
-#include <vfs.h>
+#include <fs/vfs.h>
 
 extern fs_t initramfs;
 

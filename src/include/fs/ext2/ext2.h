@@ -1,7 +1,7 @@
 #ifndef _EXT2_H
 #define _EXT2_H
 
-#include <vfs.h>
+#include <fs/vfs.h>
 
 #define	__packed	__attribute__((packed))
 

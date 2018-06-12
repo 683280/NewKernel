@@ -2,7 +2,7 @@
 // Created by carljay on 17-8-1.
 //
 
-#include "gdt_tool.h"
+#include "x86/gdt_tool.h"
 
 
 int get_one_bit(int a){

@@ -11,6 +11,8 @@ typedef struct dentry_struct dentry_t;
 typedef struct filesystem_struct {
 	//文件系统名字
 	uint8_t		*name;
+	//初始化文件系统
+	inode_t* 	(*init)(inode_t*);
 	//加载文件系统
 	inode_t*	(*load)  (inode_t*);
 	//
@@ -20,18 +22,18 @@ typedef struct filesystem_struct {
 	//
 	uint32_t 	(*create_inode) (inode_t*);
 	//读取文件系统
-	uint64_t	(*read)  (inode_t*, uint64_t, uint64_t, void*);
+	uint32_t	(*read)  (inode_t*, uint32_t, uint32_t, void*);
 	//写出文件系统
-	uint64_t	(*write) (inode_t*, uint64_t, uint64_t, void*);
+	uint32_t	(*write) (inode_t*, uint32_t, uint32_t, void*);
 	//
 	uint32_t 	(*cheack) (inode_t*);
 	//
-	uint32_t	(*ioctl) (inode_t*, uint64_t, ...);
+	uint32_t	(*ioctl) (inode_t*, uint32_t, ...);
 	//挂载文件系统
 	uint32_t	(*mount) (inode_t*, inode_t*);
 }fs_t;
 
-#include <device.h>
+#include <devices/device.h>
 
 struct inode_struct {
 	//文件名

@@ -3,7 +3,7 @@
   <component name="Encoding">
     <file url="file://$USER_HOME$/CLionProjects/test1/cmake-build-debug/test1" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/arch/x86/idt.c" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/include/ipc.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/include/sys/ipc.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/include/usr.h" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/usr/usr.asm" charset="GBK" />
   </component>

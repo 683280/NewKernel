@@ -1,0 +1,13 @@
+
+
+ifndef MAC
+CC 		= 	x86_64-elf-gcc
+LD 		= 	x86_64-elf-ld
+OBJCOPY = 	x86_64-elf-objcopy
+NASM	= 	nasm
+else
+CC 		= 	gcc
+LD 		= 	ld
+OBJCOPY = 	objcopy
+NASM	= 	nasm
+endif

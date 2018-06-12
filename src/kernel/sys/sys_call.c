@@ -2,9 +2,9 @@
 // Created by carljay on 17-8-28.
 //
 
-#include <sys_table.h>
-#include <sys_call.h>
-#include <chr.h>
+#include <sys/sys_table.h>
+#include <sys/sys_call.h>
+#include <video/chr.h>
 int print_cr3(){
     int cr3;
     __asm__("movl %%cr3,%%eax":"=a" (cr3));

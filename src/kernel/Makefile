@@ -1,3 +1,4 @@
+include ../../makehead
 SRC		=	.
 
 C_SRCS	=	$(wildcard $(SRC)/*.c) $(wildcard $(SRC)/*/*.c) $(wildcard $(SRC)/*/*/*.c)
@@ -8,12 +9,7 @@ A_OBJ	=	$(patsubst %.asm,%.ao,$(A_SRCS))
 
 OBJS	=	$(foreach file,$(notdir $(C_OBJ)),build/$(file)) $(foreach file,$(notdir $(A_OBJ)),build/$(file))
 
-CC 		= 	/Users/carl/Documents/work/gcc8.1/bin/i386-elf-gcc
-LD 		= 	x86_64-elf-ld
-OBJCOPY = 	x86_64-elf-objcopy
-NASM	= 	nasm
-
-CFLAGS	=	-I../include -m32 -s -std=c99 -fno-stack-protector -O1
+CFLAGS	=	-I../include -m32 -s -std=c99 -fno-stack-protector -O2 -Wall
 
 all:link
 

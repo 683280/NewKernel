@@ -5,9 +5,9 @@
 #ifndef NEWKERNEL_IDT_H
 #define NEWKERNEL_IDT_H
 
-#include <gdt.h>
-#include <chr.h>
-#include <io.h>
+#include <x86/gdt.h>
+#include <video/chr.h>
+#include <io/io.h>
 
 #define IDT_SIZE 255
 
@@ -19,7 +19,6 @@
 #define _load_igdt(address)__asm__ volatile("lidt (%0)"::"r"(address));
 
 extern void _test();
-void _set_8259a();
 short idt_lenght;
 
 typedef struct{

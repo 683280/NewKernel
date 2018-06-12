@@ -5,7 +5,7 @@
 #ifndef NEWKERNEL_SYS_CALL_H
 #define NEWKERNEL_SYS_CALL_H
 
-#include <sched.h>
+#include <sched/sched.h>
 #define SYS_CALL_PARA int func, int c, int b, PROCESS *pro
 #define SYS_CALL_MSG 0
 

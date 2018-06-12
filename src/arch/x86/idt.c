@@ -1,7 +1,9 @@
-#include <idt.h>
-#include <sys.h>
-#include <sched.h>
-#include <keymap.h>
+#include <x86/idt.h>
+#include <sys/sys.h>
+#include <sched/sched.h>
+#include <devices/keymap.h>
+#include <itr/pic.h>
+
 IDT_TABLE idt[IDT_SIZE];
 
 extern void s_div_by_zero();
@@ -80,8 +82,8 @@ void add_idt(int select,int address,int type,int n){
     add_idt_dpl(select,address,type,n,0);
 }
 
-void keyboard_idt(){
-    char a = in_byte(0x60);
+__interrupt void keyboard_idt(){
+    char a = inb(0x60);
     char aa = keymap[(a&0x7F)*3];
     char make = (a & FLAG_BREAK ? 0 : 1);
     if(make){
@@ -113,7 +115,7 @@ void setup_irq(int*irqs,int size){
         add_idt(code_select,*irqs,InterruptGate,i);
     }
     _load_igdt(&lidt);
-    _set_8259a();
+    setup_8250a();
     StackTop = 0x10000;
 
 

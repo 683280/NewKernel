@@ -1,9 +1,9 @@
 
-#include <vfs.h>
-#include <string.h>
-#include <alloc.h>
-#include <chr.h>
-#include <mm.h>
+#include <fs/vfs.h>
+#include <mm/string.h>
+#include <mm/alloc.h>
+#include <video/chr.h>
+#include <mm/mm.h>
 
 inode_t *vfs_root;
 

@@ -1,10 +1,10 @@
 //
 // Created by carljay on 17-7-22.
 //
-#include <chr.h>
-#include <sched.h>
-#include "mm.h"
-#include <paging.h>
+#include <video/chr.h>
+#include <sched/sched.h>
+#include "mm/mm.h"
+#include <mm/paging.h>
 #include <asm.h>
 
 void init_mm(u32 start,u32 end_mm){
@@ -111,4 +111,17 @@ void set_pg_type(char avl,char g,char d,char a,char pcd,char pwt,char us,char rw
 void* alloc(int size,PROCESS* pro){
 //    pro->p_flag
     return 0x1;
+}
+
+int mm_check_addr(void *addr) {
+#if defined(ARCH_X86)
+    u32 page = get_page_entry(addr);
+
+	if(!(page & 0x01)) return 0; // Page not present
+
+	return (page & 0x02) ? (2) : (1); // Check R/W bit
+#else
+    // Unimplemented for this architecture
+    return 0;
+#endif
 }

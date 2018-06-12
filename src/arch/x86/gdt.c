@@ -2,11 +2,11 @@
 // Created by carljay on 17-7-31.
 //
 
-#include <gdt_tool.h>
-#include <gdt.h>
-#include <sched.h>
+#include <x86/gdt_tool.h>
+#include <x86/gdt.h>
+#include <sched/sched.h>
 #include <asm.h>
-#include <chr.h>
+#include <video/chr.h>
 
 DESCRIPTOR gdt[GDT_SIZE] = {};
 

@@ -6,6 +6,8 @@
 #define NEWKERNEL_ITR_H
 
 #include <type.h>
+#include <sched/sched.h>
+
 struct pusha_regs {
     uint32_t edi, esi;
     uint32_t ebp, esp;
@@ -44,4 +46,5 @@ void do_simd_floating_point_exception();
 void do_virtualization_exception();
 void do_control_protection_exception();
 
+void int_test(struct s_stackframe iregs);
 #endif //NEWKERNEL_ITR_H

@@ -2,7 +2,7 @@ include ../../makehead
 SRC		=	.
 
 C_SRCS	=	$(wildcard $(SRC)/*.c) $(wildcard $(SRC)/*/*.c) $(wildcard $(SRC)/*/*/*.c)
-A_SRCS	=	$(wildcard $(SRC)/*.asm) $(wildcard $(SRC)/*/*.asm)
+A_SRCS	=	$(wildcard $(SRC)/*.asm) $(wildcard $(SRC)/*/*.asm) $(wildcard $(SRC)/*/*/*.asm)
 
 C_OBJ	=	$(patsubst %.c,%.o,$(C_SRCS))
 A_OBJ	=	$(patsubst %.asm,%.ao,$(A_SRCS))

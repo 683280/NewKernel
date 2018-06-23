@@ -30,19 +30,17 @@ void program_dispatch() {
 //    printf("p_curr_proc = %x  time_film %x\n",p_curr_proc,p_curr_proc->time_film);
 
     int i = p_curr_proc->pid;
-//    printf("pid = %d",i);
+    dprintf("program_dispatch  pid = %d\n",i);
     while (1) {
         if (++i >= pid)
             i = 0;
         p_curr_proc = &proc_list[i];
         p_curr_proc->time_film = p_curr_proc->priority;
-//        printf("   pid = %d\n",i);
-//        printf("program_dispatch\n");
         break;
     }
 }
 void do_timer(){
-//    printf("do_timer exec jiffies = %d\n",jiffies);
+    dprintf("do_timer exec jiffies = %d\n",jiffies);
     --p_curr_proc->time_film;
     if(p_curr_proc->time_film == 0)
         program_dispatch();

@@ -8,8 +8,6 @@
 #include "type.h"
 #include <sched/sched.h>
 
-void init_mm(u32 start,u32 end);
-
 extern void memcpy(void* p_dst,void* p_src,int size);
 void memset(void* p_dst,int src,int size);
 void memsetw(void* p_dst,int src,int size);
@@ -19,6 +17,7 @@ int liballoc_unlock();
 void* liballoc_alloc(int);
 
 void* alloc_page(int size);
+void* alloc_dir_page(u32* page_dir,int size);
 int alloc_free_page(void*page,int size);
 
 void add_pg_desc(int address,short type,int add_address,int n, short is_pte);

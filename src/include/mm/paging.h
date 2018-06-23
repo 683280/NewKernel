@@ -15,6 +15,16 @@
 
 #define USED 100
 
+#define PAGING_P        1
+#define PAGING_W        1  << 1
+#define PAGING_U        1  << 2
+#define PAGING_PWT      1  << 3
+#define PAGING_PCD      1  << 4
+#define PAGING_A        1  << 5
+#define PAGING_D        1  << 6
+#define PAGING_PAT      1  << 7
+#define PAGING_G        1  << 8
+
 #define enable_paging() \
  __asm__ volatile( \
 "movl %cr0,%eax\n" \
@@ -47,6 +57,7 @@ typedef u32 PTE_DESC;
 u32 kernel_cr3;
 
 void paging_init(u32 start,u32 end);
+u32 get_user_page_dir();
 u32 get_free_page();
 void free_page(u32 page);
 

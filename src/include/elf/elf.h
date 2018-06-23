@@ -70,5 +70,5 @@ typedef struct {
     Elf32_Phdr* phdr;
 }ELF_program;
 #pragma pack()
-void load_elf(int elf_address,ELF_program*);
+int load_elf(char* filename);
 #endif //MYKERNEL_ELF_H

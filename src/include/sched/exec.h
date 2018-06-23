@@ -7,5 +7,5 @@
 
 #include "sched/sched.h"
 //系统调用，执行程序
-int sys_exec(char* filename, int flag, int c, PROCESS* curr);
+int sys_exec(int edx,char* filename, int flag, PROCESS* curr);
 #endif //NEWKERNEL_EXEC_H

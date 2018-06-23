@@ -7,10 +7,6 @@
 #include <mm/paging.h>
 #include <asm.h>
 
-void init_mm(u32 start,u32 end_mm){
-
-
-}
 int liballoc_lock(){
 //    cli
 }
@@ -50,27 +46,29 @@ u32 line_to_physics(u32 line_addres){
     return physics_address;
 }
 void* alloc_page(int size){
-    u32* page_dir;
+    return alloc_dir_page(get_pagedir(),size);
+}
+void* alloc_dir_page(u32* page_dir,int size){
+    u32* tem_dir;
     u32* page_table;
     int tem = 0;
     int page_index;
     int table_index;
 
-    page_dir = get_pagedir();
-
-//    for (int i = 0; i < 1024; ++i) {
-//
-//    }
-
-    for (page_index = 0; page_index < 4; ++page_index) {
-
-        page_table = *(page_dir + page_index) & 0xfffff000;
-
+    for (page_index = 0; page_index < 1024; ++page_index) {
+        //获取页目录
+        tem_dir = *(page_dir + page_index);
+        //页目录是否存在
+        if(((u32)tem_dir) & 1 == 0){
+            //不存在，分配一页
+            *tem_dir = get_free_page() | 0x3;
+        }
+        tem_dir = (u32)tem_dir & 0xfffff000;
+        page_table = *tem_dir;
         for (table_index = 0; table_index < 1024; ++table_index) {
             if(*page_table & 1){
                 tem = 0;
             } else{
-//            printf("*page_table = 0x%08x    table_index = %d   tem = %d   size = %d\n",*page_table,table_index,tem,size);
                 tem++;
                 if (tem == size){
                     goto end;
@@ -82,7 +80,6 @@ void* alloc_page(int size){
     }
 end:
     if(tem != size){
-//        printf("no memory");
         return 0;
     }
     tem--;

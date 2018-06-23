@@ -3,7 +3,7 @@
 //
 
 #include <mm/mm.h>
-#include "io/vga.h"
+#include "io/cmode.h"
 int _get_point();
 void _set_point(int a);
 void repoint() {

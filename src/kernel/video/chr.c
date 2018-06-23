@@ -3,9 +3,10 @@
 //
 
 #include <mm/mm.h>
-#include <io/vga.h>
+#include <io/cmode.h>
 #include <video/print.h>
 #include <devices/serial.h>
+#include <devices/graphics/vga.h>
 #include "video/chr.h"
 #include "mm/string.h"
 
@@ -32,8 +33,15 @@ void kprintf(const char *fmt, ...) {
     va_start(args, fmt);
     i = vsprintf(printbuf, fmt, args);
     char* str = printbuf;
-    while(*str) vga_put(*str++);
-    repoint();
+//
+    extern int vga_mode;
+    if (vga_mode){
+        vga_draw_string("abcd",15,25,45);
+        vga_update_screen();
+    } else {
+        while(*str) vga_put(*str++);
+        repoint();
+    }
     va_end(args);
 }
 void printf(const char *fmt, ...) {
@@ -73,14 +81,6 @@ void printc(char ch) {
     v->color = 0x7;
     x++;
     repoint();
-}
-
-void printd(double d) {
-    itoc(d);
-}
-
-void printi(int i) {
-    itoc(i);
 }
 
 void itoc(long n) {

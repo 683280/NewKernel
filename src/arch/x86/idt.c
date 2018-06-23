@@ -56,6 +56,7 @@ irq_handler irq_handlers[] = {s_div_by_zero,                           // 0x0
 void init_itr(){
     setup_irq(&irq_handlers, sizeof(irq_handlers) / 4);
     add_idt(code_select,((int)&s_timer_interrupt) ,0x8e00,0x20);
+    add_idt(code_select,((int)&s_page_fault) ,0x8e00,0x2f);
     add_idt_dpl(code_select,((int)&s_sys_call) ,0x8e00,0x90,3);
     k_reenter = -1;
     printf("idt inited\n");
@@ -82,7 +83,7 @@ void add_idt(int select,int address,int type,int n){
     add_idt_dpl(select,address,type,n,0);
 }
 
-__interrupt void keyboard_idt(){
+void keyboard_idt(){
     char a = inb(0x60);
     char aa = keymap[(a&0x7F)*3];
     char make = (a & FLAG_BREAK ? 0 : 1);
@@ -111,8 +112,8 @@ void setup_irq(int*irqs,int size){
     lidt.size = (256 * 8) - 1;
 
     for (int i = 0; i < size; ++i) {
-        irqs++;
         add_idt(code_select,*irqs,InterruptGate,i);
+        irqs++;
     }
     _load_igdt(&lidt);
     setup_8250a();
@@ -122,6 +123,7 @@ void setup_irq(int*irqs,int size){
 }
 void setup_syscall_idt(int syscall){
     add_idt(code_select,syscall,set_dpl(TrapGate,3),0x90);
+    _load_igdt(&lidt);
 }
 
 //void init_idt(){

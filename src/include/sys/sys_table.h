@@ -6,7 +6,7 @@
 #define NEWKERNEL_SYS_TABLE_H
 typedef int (*fn_ptr)();
 
-extern int exit();
+extern int sys_exit();
 //extern int load(char*);
 
 extern int message_sendrecv();

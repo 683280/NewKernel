@@ -6,4 +6,5 @@
 #define NEWKERNEL_INIT_H
 //内核运行的第一个用户程序
 void init();
+void init2();
 #endif //NEWKERNEL_INIT_H

@@ -3,18 +3,18 @@ SECTIONS{
     . = 0x00100000;
     kern_start = .;
     vchars = 0xb8000;
-    .text :{
+    .text BLOCK(4K) : ALIGN(4K){
         *(.multiboot)
         *(.text)
     }
-    .rodata ALIGN (0x1000) : {
+    kern_end = .;
+    .rodata BLOCK(4K) : ALIGN(4K){
         *(.rodata)
     }
-
-    .data ALIGN (0x1000) : {
+    .data BLOCK(4K) : ALIGN(4K){
         *(.data)
     }
-    .bss ALIGN (0x1000): {
+    .bss BLOCK(4K) : ALIGN(4K){
         sbss = .;
         *(COMMON)
         *(.bss)

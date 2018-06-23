@@ -25,6 +25,8 @@ typedef unsigned short	uint16_t;
 typedef unsigned int	uint32_t;
 typedef uint32_t	uint64_t;
 
+typedef u32 size_t;
+
 #define NULL (void*)0
 #define __align(A)       __attribute__((__aligned__(A)))         //!< Aligns the data A bytes
 #define __interrupt     __attribute__((interrupt))

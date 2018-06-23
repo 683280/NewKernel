@@ -1,4 +1,5 @@
 global s_kernel_entry
+global entry_init
 extern kmain
 extern tss_select
 
@@ -104,3 +105,20 @@ _get_point:
     	nop
     	nop
     	ret
+extern p_curr_proc
+extern tss
+entry_init:
+        mov esp,[p_curr_proc]
+        lea eax,[esp + 0x4c]    ;将程序表中的栈顶取地址到eax
+        mov [tss + 4],eax       ;将eax赋值到tss中的esp0
+    ireturn:    ;在内核栈进入当前中断，不用设置内核栈
+        pop eax
+        mov cr3,eax
+
+        pop gs
+        pop fs
+        pop es
+        pop ds
+        popad
+        add esp,4 ;跳过 retaddr 字段
+		iret

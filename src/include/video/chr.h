@@ -4,7 +4,8 @@
 
 #ifndef NEWKERNEL_CHR_H
 #define NEWKERNEL_CHR_H
-#include <stdarg.h>
+
+#include <type.h>
 // 定义常用符号常数
 #define ZEROPAD	1		/* pad with zero */
 #define SIGN	2		/* unsigned/signed long */

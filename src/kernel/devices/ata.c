@@ -151,7 +151,7 @@ ata_read(atadev_private_t *p, uint32_t addr, uint32_t size, void *buf) {
 	    dprintf("ata read error  LBA > max LBA(%d)  LBA = %d\n",max_lba,LBA);
         return -1;
 	}
-	dprintf("LBA = %d  offset = %d   sectors = %d  size = %d   \n",LBA,offset,sectors,size);
+//	dprintf("LBA = %d  offset = %d   sectors = %d  size = %d   \n",LBA,offset,sectors,size);
 	uint8_t *_buf = malloc(512 * sectors);
 	LBA += p->start_lba;
 	s_ata_read_sectors(LBA,sectors,_buf);

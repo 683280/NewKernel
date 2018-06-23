@@ -26,15 +26,13 @@ PTE_DESC page_tables[4][1024]  __align(0x1000);
 void paging_init(u32 start,u32 end){
     mm_max_size = end / 4;
 
-//    printf("mm_max_size = %d\n",mm_max_size);
     clear_pagedir(&page_dir);
     clear_pagedir(&page_tables[0]);
     clear_pagedir(&page_tables[1]);
     clear_pagedir(&page_tables[2]);
     clear_pagedir(&page_tables[3]);
-//    for (int k = 0; k < 4; ++k) {
-//
-//    }
+
+
     page_dir[0] = ((int)&page_tables[0]) | 0x3;
     page_dir[1] = ((int)&page_tables[1]) | 0x3;
     page_dir[2] = ((int)&page_tables[2]) | 0x3;
@@ -45,9 +43,10 @@ void paging_init(u32 start,u32 end){
     }
     //TODO 计算内核占用的内存 ，将内核占用的内存也全部设为 USED
     int kernel_used_paging = 0;
-
-    for (int i = 0; i < 4096; ++i) {
-        mem_map[i] = i << 12;
+    u32 offset = 0;
+    for (int i = 0; i < 1024; ++i) {
+        mem_map[i] = offset;
+        offset += 0x1000;
     }
 
     mm_map_index = 0x200;
@@ -57,7 +56,7 @@ void paging_init(u32 start,u32 end){
 //    printf("page_tables = 0x%x  page_tables[0] = 0x%x\n",&page_tables,page_tables[0]);
 
     kernel_cr3 = &page_dir;
-//    printf("kernel_cr3 = %x\n",kernel_cr3);
+    dprintf("kernel_cr3 = %x\n",kernel_cr3);
     set_cr3(kernel_cr3);
     enable_paging();
 //    printf("paging end\n");
@@ -67,6 +66,17 @@ u32 get_free_page(){
     u32 i = mem_map[mm_map_index];
     mm_map_index++;
     return i;
+}
+u32 get_user_page_dir(){
+    u32 page_dir = get_free_page();
+    clear_pagedir(page_dir);
+
+    *((u32*)page_dir) = ((u32)&page_tables[0]) | 0x3;
+    *(((u32*)page_dir) + 1) = ((u32)&page_tables[1]) | 0x3;
+    *(((u32*)page_dir) + 2) = ((u32)&page_tables[2]) | 0x3;
+    *(((u32*)page_dir) + 3) = ((u32)&page_tables[3]) | 0x3;
+
+    return page_dir;
 }
 
 void free_page(u32 page){

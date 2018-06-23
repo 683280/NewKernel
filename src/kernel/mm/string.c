@@ -3,33 +3,43 @@
 //
 
 #include <mm/alloc.h>
+#include <video/chr.h>
+#include <mm/mm.h>
 #include "mm/string.h"
 
 
-uint32_t strlen(uint8_t *str)
-{
-    register int __res ;
-    __asm__("cld\n\t"
-            "repne\n\t"
-            "scasb\n\t"
-            "notl %0\n\t"
-            "decl %0"
-    :"=c" (__res):"D" (str),"a" (0),"0" (0xffffffff));
-    return __res;
+uint32_t strlen(uint8_t *str) {
+//    register int __res ;
+//    __asm__("cld\n\t"
+//            "repne\n\t"
+//            "scasb\n\t"
+//            "notl %0\n\t"
+//            "decl %0"
+//    :"=c" (__res):"D" (str),"a" (0),"0" (0xffffffff));
+//    return __res;
+    u32 ret = 0;
+    while(*(str++))ret++;
+    return ret;
 }
 
-uint8_t *strdup(uint8_t *str)
-{
-    uint8_t *tmp = malloc(strlen(str) + 1);
-    uint8_t *ret = tmp;
-    while( *str && (*tmp++ = *str++));
-    return *tmp = '\0', ret;
+uint8_t *strdup(uint8_t *str) {
+    int size = strlen(str);
+    uint8_t *tmp = malloc(size + 1);
+    memcpy(tmp,str,size);
+    *(tmp + size) = '\0';
+    return tmp;
 }
 
-uint32_t strcmp(uint8_t *str1, uint8_t *str2)
-{
-    for(; *str1 && *str2 && *str1 == *str2; ++str1, ++str2);
-    return *str1 - *str2;
+uint32_t strcmp(uint8_t *str1, uint8_t *str2) {
+    u32 len1 = strlen(str1);
+    u32 len2 = strlen(str2);
+    if (len1 != len2)return 0;
+    int i;
+    for (i = 0; i < len1; ++i) {
+        if(*str1++ != *str2++){ return 0;}
+    }
+
+    return 1;
 }
 
 uint8_t *strcat(uint8_t *str1, uint8_t *str2)

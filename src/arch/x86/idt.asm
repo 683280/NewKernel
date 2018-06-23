@@ -131,6 +131,7 @@ s_page_fault:
         popa
         iret
 s_reserved:
+        iret
         cli
         pop dword [errcode]
         pusha

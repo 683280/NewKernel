@@ -1,6 +1,6 @@
 #include <fs/vfs.h>
 
-#include <initramfs.h>
+#include <fs/initramfs.h>
 #include <fs/devfs.h>
 #include <fs/ext2/ext2.h>
 #include <mm/string.h>

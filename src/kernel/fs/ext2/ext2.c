@@ -22,7 +22,7 @@ uint32_t *get_block(inode_t *dev_inode, uint32_t block_id,uint32_t offset,uint32
     uint32_t bs = 1024 << ext2_private->sb->block_size;
 
     size = size ? size : bs;
-    dprintf("get_block  block_id = %d    bs = %d   address = %d\n",block_id,bs,(block_id * bs) + offset);
+//    dprintf("get_block  block_id = %d    bs = %d   address = %d\n",block_id,bs,(block_id * bs) + offset);
     dev_inode->dev->read(dev_inode->d_data,(block_id * bs) + offset, size, buf);
 //    printf("get_block end \n");
     return buf;
@@ -301,7 +301,7 @@ static uint32_t init_ext2(inode_t* dev_inode){
 
 	if(sb->ext2_signature != 0xEF53) return NULL;
 
-    dprintf("bs = %d \n",1024 << ((ext2_private_t*)dev_inode->p)->sb->block_size);
+//    dprintf("bs = %d \n",1024 << ((ext2_private_t*)dev_inode->p)->sb->block_size);
 
     ext2_inode_t * root_inode = ext2_get_inode(dev_inode,sb,2);
     dev_inode->c_time = root_inode->creation_time;

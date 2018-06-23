@@ -9,47 +9,54 @@ inode_t *vfs_root;
 
 void vfs_mount_root(inode_t *node)
 {
-	vfs_root = malloc(sizeof(inode_t));
-	vfs_mount(vfs_root, "/", node);
+	vfs_root = node;
+	vfs_root->fs->init(vfs_root);
+}
+inode_t* find_inode_by_path(inode_t* inode,uint8_t* path){
+    if(!inode || !inode->list || !inode->list->count)return NULL;
+    inode_t* tmp = inode->list->head;
+    uint32_t i = 0;
+    while (tmp && i < inode->list->count) {
+        if(strcmp(tmp->name,path))return tmp;
+        tmp = tmp->next;
+        i++;
+    }
+    return NULL;
 }
 
-inode_t *vfs_trace_path(inode_t *inode, uint8_t *_path)
-{
+inode_t *vfs_trace_path(inode_t *inode, uint8_t *_path) {
+//	dprintf("<<<<<<<<<<vfs_trace_path>>>>>>>>>>\n");
+
 	if(!_path || (_path && !*_path)) return inode;
+
 	uint8_t *path = strdup(_path);
 	uint32_t len = strlen(path);
 	uint8_t *end_path = path + len;
+//	dprintf("path = %s   len = %d \n",path,strlen(_path));
+	uint32_t dir_levels = 1;
 	uint32_t i;
 	for( i = 0; i < len; ++i)
-		if(path[i] == '/')
-			path[i] = '\0';
-			
+		if(path[i] == '/') {
+            path[i] = '\0';
+            dir_levels++;
+        }
+
+
 	if((!*path) && len == 1) return inode;
 	if(!*path) ++path;
 
 	inode_t *tmp = inode;
-	
-	while(tmp)
-	{
-		if(tmp->type == FS_MOUNTPOINT)
-			tmp = ((vfs_mountpoint_t*)tmp->p)->inode;
-		
-		if(!tmp->list) return NULL;
-		if(!tmp->list->count) return NULL;
-		uint32_t k = 0;
-		inode_t *_tmp = tmp->list->head;
-		if(!_tmp) return NULL;
-		while(_tmp && k < tmp->list->count)
-		{
-			if(!strcmp(path, _tmp->name)) break;
-			_tmp = _tmp->next;
-			++k;
-		}
-		if( !_tmp || !_tmp->name || strcmp(path, _tmp->name) ) return NULL;
-		tmp = _tmp;
-		while(path < end_path && *path++);
-		if(path >= end_path) return tmp;
+//    dprintf("inode = 0x%08x   count = %d\n",inode,inode->list->count);
+//
+//    dprintf("while(tmp) \n");
+	while(dir_levels--){
+
+        tmp = find_inode_by_path(tmp,path);
+        if(!tmp)return NULL;
+
+        path += strlen(path);
 	}
+    return tmp;
 }
 
 inode_t *vfs_create(inode_t *root, uint8_t *path, inode_t *new_node)
@@ -138,4 +145,10 @@ uint64_t vfs_read(inode_t *inode, uint64_t offset, uint64_t len, void *buf)
 uint64_t vfs_write(inode_t *inode, uint64_t offset, uint64_t len, void *buf)
 {
 	return inode->fs->write(inode, offset, len, buf);
+}
+
+inode_t* vfs_open(char* filename){
+//    dprintf("vfs_root = 0x%08x    count = %d\n",vfs_root,vfs_root->list->count);
+    inode_t *dir = vfs_trace_path(vfs_root, filename);
+    return dir;
 }

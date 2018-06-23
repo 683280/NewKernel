@@ -19,6 +19,11 @@ extern iret_data
 extern p_curr_proc
 extern do_timer
 extern jiffies
+extern int_test
+
+extern kernel_cr3
+rr_eax:
+        dd 0
 
 s_save:
         pushad
@@ -26,19 +31,25 @@ s_save:
         push es
         push fs
         push gs
+        mov [rr_eax],eax
         mov eax,cr3
         push eax
+        ;call int_test
         ;保存CPU状态结束
         mov esi, esp
 
         inc dword [k_reenter]
         cmp dword [k_reenter], 0
-        jne .1 ;不是内核栈 则继续向下执行，否则到 .1处执行
-        mov esp, [StackTop]
+        jne .1 ;kreenter != 0 跳转到.1  不是内核栈 则继续向下执行，否则到 .1处执行
+        mov eax,[kernel_cr3]
+        mov cr3,eax
+        mov esp, [StackTop] ;非内核  k_reenter = 0
         push preturn ;
+        mov eax,[rr_eax]
         jmp [esi + 0x34] ; 等于ret 但是不出栈
-    .1:
+    .1:                     ;内核
         push ireturn
+        mov eax,[rr_eax]
         jmp [esi + 0x34]
 
     preturn:    ;在用户栈进入当前中断，需要返回用户栈
@@ -48,6 +59,7 @@ s_save:
     ireturn:    ;在内核栈进入当前中断，不用设置内核栈
         dec	dword [k_reenter]
         mov [StackTop],esp
+
         pop eax
         mov cr3,eax
         pop gs

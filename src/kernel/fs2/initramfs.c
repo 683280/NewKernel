@@ -1,6 +1,6 @@
 
 #include <fs/vfs.h>
-#include <initramfs.h>
+#include <fs/initramfs.h>
 #include <mm/string.h>
 #include <mm/alloc.h>
 #include <video/chr.h>

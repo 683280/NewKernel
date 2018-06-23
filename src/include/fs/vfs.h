@@ -86,12 +86,18 @@ extern fsman_t fsman;
 extern fs_t vfs;
 
 extern inode_t *vfs_root;
+void vfs_mount_root(inode_t *node);
 inode_t *vfs_trace_path(inode_t*, uint8_t*);
 inode_t *vfs_create(inode_t*, uint8_t*, inode_t*);
 inode_t *vfs_mount(inode_t*, uint8_t*, inode_t*);
 void vfs_tree(inode_t*);
 
-uint64_t vfs_read (inode_t*, uint64_t, uint64_t, void*);
-uint64_t vfs_write(inode_t*, uint64_t, uint64_t, void*);
 
+uint32_t vfs_read (inode_t*, uint64_t, uint64_t, void*);
+uint32_t vfs_write(inode_t*, uint64_t, uint64_t, void*);
+
+////file system
+inode_t* vfs_open(char* filename);
+//uint32_t vfs_del(char* filename);
+//uint32_t vfs_re
 #endif

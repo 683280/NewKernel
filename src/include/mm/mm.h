@@ -9,8 +9,8 @@
 #include <sched/sched.h>
 
 extern void memcpy(void* p_dst,void* p_src,int size);
-void memset(void* p_dst,int src,int size);
-void memsetw(void* p_dst,int src,int size);
+extern void memset(void* p_dst,int src,int size);
+extern void memsetw(void* p_dst,int src,int size);
 
 int liballoc_lock();
 int liballoc_unlock();

@@ -29,6 +29,5 @@ int is_transmit_empty(u16 port) {
 
 void write_serial(u16 port,char a) {
     while (is_transmit_empty(port) == 0);
-
     outb(port,a);
 }
